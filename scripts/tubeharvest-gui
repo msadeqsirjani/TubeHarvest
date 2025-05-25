@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+"""
+TubeHarvest Interactive Launcher
+Quick launcher for the enhanced interactive console interface.
+"""
+
+import sys
+import os
+
+# Add the parent directory to the Python path so we can import tubeharvest
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from tubeharvest.cli.interactive import interactive_main
+
+if __name__ == "__main__":
+    try:
+        exit_code = interactive_main()
+        sys.exit(exit_code)
+    except KeyboardInterrupt:
+        print("\n👋 Goodbye!")
+        sys.exit(0)
+    except Exception as e:
+        print(f"❌ Fatal error: {e}")
+        sys.exit(1) 

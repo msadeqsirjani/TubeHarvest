@@ -1,0 +1,10 @@
+# Core dependencies for TubeHarvest
+yt-dlp>=2023.3.4
+tqdm>=4.65.0
+requests>=2.28.2
+python-ffmpeg-video-streaming>=0.1.15
+colorama>=0.4.6
+rich>=13.7.0
+prompt-toolkit>=3.0.36
+click>=8.1.7
+inquirer>=3.1.3 

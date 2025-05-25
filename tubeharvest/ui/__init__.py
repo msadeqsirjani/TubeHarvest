@@ -7,4 +7,4 @@ the rich console interface and UI components.
 
 from .console import TubeHarvestUI, ui
 
-__all__ = ["TubeHarvestUI", "ui"] 
+__all__ = ["TubeHarvestUI", "ui"]

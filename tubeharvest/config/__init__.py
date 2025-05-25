@@ -6,4 +6,4 @@ This package contains configuration settings and management utilities.
 
 from .settings import *
 
-__all__ = [] 
+__all__ = []

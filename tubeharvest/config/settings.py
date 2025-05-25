@@ -11,7 +11,9 @@ from typing import Dict, Any
 # Application information
 APP_NAME = "TubeHarvest"
 APP_VERSION = "2.0.0"
-APP_DESCRIPTION = "A comprehensive YouTube downloader with beautiful interactive console interface"
+APP_DESCRIPTION = (
+    "A comprehensive YouTube downloader with beautiful interactive console interface"
+)
 
 # Default download settings
 DEFAULT_OUTPUT_DIR = "downloads"
@@ -50,15 +52,18 @@ LOG_DIR = CONFIG_DIR / "logs"
 # User agent for requests
 USER_AGENT = f"{APP_NAME}/{APP_VERSION}"
 
+
 def get_config_dir() -> Path:
     """Get the configuration directory path."""
     return CONFIG_DIR
+
 
 def ensure_config_dir() -> None:
     """Ensure the configuration directory exists."""
     CONFIG_DIR.mkdir(exist_ok=True)
     LOG_DIR.mkdir(exist_ok=True)
 
+
 def get_default_output_dir() -> str:
     """Get the default output directory."""
-    return os.path.join(os.getcwd(), DEFAULT_OUTPUT_DIR) 
+    return os.path.join(os.getcwd(), DEFAULT_OUTPUT_DIR)

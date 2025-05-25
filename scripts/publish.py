@@ -33,7 +33,9 @@ def clean_build():
     # Remove build directories
     build_dirs = ["build", "dist", "*.egg-info"]
     for pattern in build_dirs:
-        run_command(["rm", "-rf"] + list(Path(".").glob(pattern)), check=False)
+        paths = [str(p) for p in Path(".").glob(pattern)]
+        if paths:
+            run_command(["rm", "-rf"] + paths, check=False)
     
     print("✅ Build artifacts cleaned")
 

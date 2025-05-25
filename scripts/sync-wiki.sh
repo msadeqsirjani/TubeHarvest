@@ -69,7 +69,7 @@ if [ "$DRY_RUN" = false ]; then
     else
         log_info "Updating existing wiki repository..."
         cd "$WIKI_DIR"
-        git pull origin master
+        git pull origin main
         if [ $? -eq 0 ]; then
             log_success "Wiki repository updated"
         else
@@ -233,7 +233,7 @@ if [ "$DRY_RUN" = false ]; then
 
     # Push changes
     log_info "Pushing changes to GitHub Wiki..."
-    git push origin master
+    git push origin main
 
     if [ $? -eq 0 ]; then
         log_success "Wiki updated successfully!"
